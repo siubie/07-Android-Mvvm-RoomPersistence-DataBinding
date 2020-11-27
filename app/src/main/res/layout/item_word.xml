@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="word"
+            type="id.putraprima.roommvvmjava.models.Word" />
+        <variable
+            name="clickListener"
+            type="id.putraprima.roommvvmjava.screen.wordlist.OnItemWordListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{()->clickListener.onWordClicked(word)}"
+        >
+
+        <TextView
+            android:id="@+id/word"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{word.word}"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:height="50dp">
+
+        </TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

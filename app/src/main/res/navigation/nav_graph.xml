@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listWordFragment">
+
+    <fragment
+        android:id="@+id/listWordFragment"
+        android:name="id.putraprima.roommvvmjava.screen.wordlist.ListWordFragment"
+        android:label="fragment_list_word"
+        tools:layout="@layout/fragment_list_word" >
+        <action
+            android:id="@+id/action_listWordFragment_to_wordAddFragment"
+            app:destination="@id/wordAddFragment" />
+        <action
+            android:id="@+id/action_listWordFragment_to_wordDetailFragment"
+            app:destination="@id/wordDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wordAddFragment"
+        android:name="id.putraprima.roommvvmjava.screen.wordadd.WordAddFragment"
+        android:label="fragment_word_add"
+        tools:layout="@layout/fragment_word_add" />
+    <fragment
+        android:id="@+id/wordDetailFragment"
+        android:name="id.putraprima.roommvvmjava.screen.worddetail.WordDetailFragment"
+        android:label="fragment_word_detail"
+        tools:layout="@layout/fragment_word_detail" />
+</navigation>
