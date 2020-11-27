@@ -21,10 +21,22 @@
         android:id="@+id/wordAddFragment"
         android:name="id.putraprima.roommvvmjava.screen.wordadd.WordAddFragment"
         android:label="fragment_word_add"
-        tools:layout="@layout/fragment_word_add" />
+        tools:layout="@layout/fragment_word_add" >
+        <action
+            android:id="@+id/action_wordAddFragment_to_listWordFragment"
+            app:destination="@id/listWordFragment" >
+            <argument
+                android:name="word"
+                android:defaultValue="@null" />
+        </action>
+    </fragment>
     <fragment
         android:id="@+id/wordDetailFragment"
         android:name="id.putraprima.roommvvmjava.screen.worddetail.WordDetailFragment"
         android:label="fragment_word_detail"
-        tools:layout="@layout/fragment_word_detail" />
+        tools:layout="@layout/fragment_word_detail" >
+        <argument
+            android:name="word"
+            app:argType="id.putraprima.roommvvmjava.models.Word" />
+    </fragment>
 </navigation>

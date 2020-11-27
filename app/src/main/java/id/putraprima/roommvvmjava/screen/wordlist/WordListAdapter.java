@@ -33,6 +33,7 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.ViewHo
 
     public void setWordList(List<Word> wordList) {
         this.wordList = wordList;
+        notifyDataSetChanged();
     }
 
     @NonNull
